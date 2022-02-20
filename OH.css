@@ -3,7 +3,7 @@
 }
 /* The Modal (background) */
 .modal {
-     display: block; /* pops up when page loads */
+     display: none; /* pops up when page loads */
      position: fixed; /* Stay in place */
      z-index: 1; /* Sit on top */
      left: 0;
@@ -14,7 +14,6 @@
      background-color: rgb(0,0,0); /* Fallback color */
      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal Content/Box */
 .modal-content {
      background-color: #fefefe;
@@ -23,6 +22,23 @@
      border: 1px solid #888;
      width: 80%; /* Could be more or less, depending on screen size */
 }
+.close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+     position: absolute;
+     top: 2px;
+     right: 2px;
+     display: none;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+   }
 #queue-list{
      padding-left: 0px;
 }
@@ -39,15 +55,25 @@
      border-top: 1px solid rgb(166, 30, 30);
      border-bottom: 1px solid rgb(166, 30, 30);
      color: rgb(166, 30, 30);
+     position: relative;
+}
+#toggle-view {
+     padding-right: 10px;
 }
 .navbar-custom {
      background-color: white;
      border-bottom: 3px solid rgb(166, 30, 30);
      margin-bottom: 10px;
+     width: 100%;
+     justify-content:space-between;
 }
 .navbar-brand {
      padding-left: 10px;
 }
 #btn-submit {
      background-color:rgb(166, 30, 30);
+}
+#navbar-logo {
+     height: 30px;
+     padding-left: 15px;
 }

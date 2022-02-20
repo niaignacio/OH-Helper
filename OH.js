@@ -9,9 +9,9 @@ function readTextFile(file, callback){
      }
      rawFile.send(null);
 }
-
+let data;
 readTextFile("data.JSON", function(text){
-     let data = JSON.parse(text);
+     data = JSON.parse(text);
      console.log(data);
      for(let i = 0; i<data.length; i++){
           console.log(data[i]);
@@ -41,6 +41,7 @@ function addToQueue(stu){
      $("#queue-list").append(`
           <div class="student">
                <h5 class="student-name"> ${stu.lastName}, ${stu.firstName} </h5>
+               <span class="close">&times;</span>
                <i class="student-class"> class: ${stu.classID} <br /> topic: ${stu.questionDescription} </i>
           </div>
      `);
@@ -87,6 +88,23 @@ $("#btn-submit").on("click", function(){
      } else {
           $("#myModal").css("display", "none");
           let stu = new Student(firstName, lastName, studentID, email, phone, classID, question);
+          data.push(stu);
+          console.log(data);
           addToQueue(stu);
      }
 });
+
+
+
+$("#customSwitch1").on("click", function(){
+     let state = ( $("#customSwitch1").prop("checked") );
+     console.log(state);
+     if(state){
+          $(".close").css("display", "block");
+          $(".close").on("click", function(){
+               $(this).parent().css("display", "none");
+          })
+     } else {
+          $(".close").css("display", "none");
+     }
+})

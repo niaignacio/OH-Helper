@@ -10,16 +10,16 @@
 </head>
 <body>
      <nav class="navbar navbar-expand-md navbar-custom">
-          <a class="navbar-brand" href="#">OH Helper</a>
+          <img id="navbar-logo" src="icon1.png" alt="OH Helper Logo" />
+          <div class="custom-control custom-switch">
+               <input type="checkbox" class="custom-control-input" id="customSwitch1">
+               <label class="custom-control-label" for="customSwitch1" id="toggle-view"> TA View </label>
+             </div>
      </nav>
-     <!-- <div class="modal">
-          
-     </div> -->
      <div id="myModal" class="modal">
 
           <!-- Modal content -->
           <div class="modal-content">
-            <!-- <span class="close">&times;</span> -->
             <form id="form">
                <label for="fname-input"> First Name: </label>
                <input type="text" id="fname-input" class="required-field"/> <br />
@@ -47,7 +47,6 @@
                          <ul id="queue-list">
 
                          </ul>
-                    <button type="button" class="btn btn-success" id="add-to-queue">Add</button>
                </div>
                <div class="col" id="chat-col">
                     <div id="tlkio" data-channel="usc-csci-chat" data-theme="theme--minimal" style="width:100%;height:400px;"></div>
