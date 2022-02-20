@@ -1,0 +1,39 @@
+[
+     {
+          "firstName": "Tyran",
+          "lastName": "Trojan",
+          "studentID": 9879879871,
+          "email": "tytrojan@usc.edu",
+          "phone": "9998887777",
+          "classID": "201",
+          "questionDescription": "when is the midterm?"
+     },
+     {
+          "firstName": "Tommy",
+          "lastName": "Trojan",
+          "studentID": 1231231234,
+          "email": "ttrojan@usc.edu",
+          "phone": "9098888888",
+          "classID": "270",
+          "questionDescription": "where is the classroom?"
+     },
+     {
+          "firstName": "Tammy",
+          "lastName": "Trojan",
+          "studentID": 4564564567,
+          "email": "tamtroj@usc.edu",
+          "phone": "2223334444",
+          "classID": "104",
+          "questionDescription": "seg fault in function 4"
+     },
+     {
+          "firstName": "Billy",
+          "lastName": "Bruin",
+          "studentID": 1111111111,
+          "email": "bbruin@usc.edu",
+          "phone": "8768768765",
+          "classID": "102",
+          "questionDescription": "just hangin out"
+     }
+   ]
+   
