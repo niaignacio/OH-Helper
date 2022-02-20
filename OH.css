@@ -1,9 +1,12 @@
 .content {
      display: block;
 }
+input {
+     margin-bottom: 15px;
+}
 /* The Modal (background) */
 .modal {
-     display: none; /* pops up when page loads */
+     display: block; /* pops up when page loads */
      position: fixed; /* Stay in place */
      z-index: 1; /* Sit on top */
      left: 0;
@@ -21,6 +24,7 @@
      padding: 20px;
      border: 1px solid #888;
      width: 80%; /* Could be more or less, depending on screen size */
+     max-width: 1000px;
 }
 .close {
      color: #aaa;
@@ -43,12 +47,10 @@
      padding-left: 0px;
 }
 #queue-col {
-     /* background-color: aqua; */
      padding: 20px;
      margin-right: 5px;
 }
 #chat-col {
-     /* background-color: pink; */
      margin-left: 5px;
 }
 .student {
@@ -56,6 +58,9 @@
      border-bottom: 1px solid rgb(166, 30, 30);
      color: rgb(166, 30, 30);
      position: relative;
+}
+.student-checkbox {
+     visibility: hidden;
 }
 #toggle-view {
      padding-right: 10px;
@@ -72,6 +77,16 @@
 }
 #btn-submit {
      background-color:rgb(166, 30, 30);
+}
+#btn-invite {
+     display: none;
+     background-color: white;
+     color:rgb(166, 30, 30);
+     border-color:rgb(166, 30, 30);
+}
+#btn-invite:hover {
+     background-color: rgb(166, 30, 30);
+     color: white;
 }
 #navbar-logo {
      height: 30px;

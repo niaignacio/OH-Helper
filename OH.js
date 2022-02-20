@@ -40,15 +40,21 @@ $("#add-to-queue").on("click", function(){
 function addToQueue(stu){
      $("#queue-list").append(`
           <div class="student">
-               <h5 class="student-name"> ${stu.lastName}, ${stu.firstName} </h5>
-               <span class="close">&times;</span>
-               <i class="student-class"> class: ${stu.classID} <br /> topic: ${stu.questionDescription} </i>
+               <div class="row">
+                    <div class="col-1">
+                         <input type="checkbox" class="student-checkbox"/>
+                    </div>
+                    <div class="col-11">
+                         <h5 class="student-name"> ${stu.lastName}, ${stu.firstName} </h5>
+                         <span class="close">&times;</span>
+                         <i class="student-class"> class: ${stu.classID} <br /> topic: ${stu.questionDescription} </i>
+                    </div>
+               </div>
           </div>
      `);
 }
 
 $("#btn-submit").on("click", function(){
-     alert("click");
      let missingFields = [];
      let firstName = $("#fname-input").val();
      let lastName = $("#lname-input").val();
@@ -101,10 +107,26 @@ $("#customSwitch1").on("click", function(){
      console.log(state);
      if(state){
           $(".close").css("display", "block");
+          $(".student-checkbox").css("visibility", "visible");
+          $("#btn-invite").css("display", "block");
           $(".close").on("click", function(){
-               $(this).parent().css("display", "none");
+               $(this).parent().parent().css("display", "none");
+               $(this).parent().parent().css("border", "none");
           })
      } else {
           $(".close").css("display", "none");
+          $(".student-checkbox").css("visibility", "hidden");
+          $("#btn-invite").css("display", "none");
      }
 })
+$("#btn-invite").on("click", function(){
+     console.log( $(".student-checkbox") );
+     let boxes = $(".student-checkbox");
+     for(let i = 0; i<boxes.length; i++){ //find out which students we want to invite
+          console.log(boxes[i].checked);
+          if( !boxes[i].checked ){
+               console.log(boxes[i]);
+               console.log( $(this).parent().children().children().children().children(".col-11").children(".student-name") );
+          }
+     }
+});
